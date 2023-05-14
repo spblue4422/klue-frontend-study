@@ -2,16 +2,11 @@ import React, { ButtonHTMLAttributes, EventHandler, MouseEventHandler, useState 
 import "../app/style.css";
 
 interface SquareProps {
-	onSquareClick : () => void;
+	onSquareClick: () => void;
 	value: number;
-	order: number;
 }
 
-const Square: React.FC<SquareProps> = ({ onSquareClick, value, order }) => {
-	const buttonHandle = () => {
-		onSquareClick;
-	}
-
+const Square: React.FC<SquareProps> = ({ onSquareClick, value }) => {
 	return (
 		<button className={"square"} onClick={onSquareClick}>
 			{value}
