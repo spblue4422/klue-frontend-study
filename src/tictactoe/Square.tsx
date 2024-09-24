@@ -1,17 +1,17 @@
-import React, { ButtonHTMLAttributes, EventHandler, MouseEventHandler, useState } from "react";
+import React from "react";
 import "../app/style.css";
 
 interface SquareProps {
-	onSquareClick: () => void;
-	value: number;
+  onSquareClick: () => void;
+  value: number;
 }
 
 const Square: React.FC<SquareProps> = ({ onSquareClick, value }) => {
-	return (
-		<button className={"square"} onClick={onSquareClick}>
-			{value}
-		</button>
-	);
+  return (
+    <button className={"square"} onClick={onSquareClick}>
+      {value}
+    </button>
+  );
 };
 
 export default Square;
